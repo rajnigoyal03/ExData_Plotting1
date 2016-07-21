@@ -1,4 +1,5 @@
-Enter file contents here#Data Loading and Preprocessing
+Enter file contents here
+#Data Loading and Preprocessing
 
 dataFile <- "household_power_consumption.txt"
 power <- read.table(dataFile, header=T, sep=";")
@@ -14,10 +15,10 @@ df$Sub_metering_3 <- as.numeric(as.character(df$Sub_metering_3))
 
 #My Plot 2
 
-plot1 <- function() {
+plot2 <- function() {
         plot(df$timestamp,df$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
         dev.copy(png, file="plot2.png", width=480, height=480)
         dev.off()
         cat("plot2.png has been saved in", getwd())
 }
-plot1()
+plot2()
